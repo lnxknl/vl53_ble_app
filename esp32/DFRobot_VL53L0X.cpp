@@ -216,7 +216,7 @@ void DFRobot_VL53L0X::stop(){
 	writeByteData(0xFF, 0x00);
 }
 
-float DFRobot_VL53L0X::getDistance(){
+float DFRobot_VL53L0X::getDistance(){// @NOTE , process received data
 	readVL53L0X();
 	if(_detailedData.distance == 20)
 		_detailedData.distance = _distance;
